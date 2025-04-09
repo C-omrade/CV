@@ -1,5 +1,5 @@
 body {
-    background-color: #a8e9e97e;
+    background-color: #b3e4e47e;
 }
 hr {
    /* background-color: white;  */
@@ -15,7 +15,11 @@ h1{
 }
 h2{
     color: #123636;
+    border-width: None;
+    margin-bottom: 2%;
 }
 h3 {
-    color: #0b4242;
+    color: #0e693c;
+    margin-top: 2%;
+    margin-bottom: 1%;
 }
