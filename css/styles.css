@@ -23,3 +23,8 @@ h3 {
     margin-top: 2%;
     margin-bottom: 0.5%;
 }
+div .image{
+    height: 500px;
+    width:500px;
+    object-fit: cover;
+}
