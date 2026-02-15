@@ -1,218 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Nishant Mahajan</title>
+<meta charset="UTF-8">
+<title>Nishant Mahajan</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./images/favicon-32x32.png">
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="./images/favicon-32x32.png">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #000;
-            margin: 0;
-            overflow-x: hidden; /* prevents blur overflow */
-        }
+<style>
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+    margin: 0;
+    overflow-x: hidden;
+}
 
-        /* ================= NAVBAR ================= */
+/* ================= NAVBAR ================= */
 
-        .navbar-custom {
-            background-color: #000;
-            padding: 18px 10px;
-        }
+.navbar-custom {
+    background-color: #000;
+    padding: 12px 10px;
+}
 
-        .logo-circle {
-            width: 48px;
-            height: 48px;
-            background-color: #2cc6c3;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 30px;
-        }
+.logo-circle {
+    width: 44px;
+    height: 44px;
+    background-color: #2cc6c3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 22px;
+}
 
-        .nav-link {
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            transition: 0.3s ease;
-        }
+.nav-link {
+    font-weight: 500;
+    transition: 0.3s ease;
+}
 
-        .nav-link:hover {
-            color: #2cc6c3 !important;
-        }
+.nav-link:hover {
+    color: #2cc6c3 !important;
+}
 
-        /* ================= HERO SECTION ================= */
+/* ================= HERO ================= */
 
-        .hero-section {
-            position: relative;
-            min-height: calc(100vh - 90px); /* Fit screen minus navbar */
-            display: flex;
-            align-items: center;
-            text-align: center;
-            overflow: hidden;
-            background: #0f0f0f;
-            color: white;
-            padding: 40px 0;
-        }
+.hero-section {
+    position: relative;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    background: #0f0f0f;
+    color: white;
+    padding: 40px 0;
+}
 
-        /* Animated glowing orbs */
-        .hero-section::before,
-        .hero-section::after {
-            content: "";
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            border-radius: 50%;
-            filter: blur(120px);
-            opacity: 0.4;
-            animation: float 12s ease-in-out infinite alternate;
-            z-index: 0;
-        }
+/* Glow orbs */
+.hero-section::before,
+.hero-section::after {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.35;
+    animation: float 12s ease-in-out infinite alternate;
+    z-index: 0;
+}
 
-        .hero-section::before {
-            background: #2cc6c3;
-            top: -150px;
-            left: -150px;
-        }
+.hero-section::before {
+    background: #2cc6c3;
+    top: -120px;
+    left: -120px;
+}
 
-        .hero-section::after {
-            background: #6c63ff;
-            bottom: -150px;
-            right: -150px;
-            animation-delay: 4s;
-        }
+.hero-section::after {
+    background: #6c63ff;
+    bottom: -120px;
+    right: -120px;
+    animation-delay: 4s;
+}
 
-        @keyframes float {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(80px, 60px); }
-        }
+@keyframes float {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(60px, 40px); }
+}
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
+.hero-content { z-index: 2; }
 
-        .hero-title {
-            font-size: 56px;
-            font-weight: 700;
-            letter-spacing: -1px;
-        }
+.hero-title {
+    font-size: 52px;
+    font-weight: 700;
+}
 
-        .hero-subtitle {
-            color: #2cc6c3;
-            font-size: 20px;
-            max-width: 750px;
-            margin: 20px auto 40px;
-        }
+.hero-subtitle {
+    color: #2cc6c3;
+    font-size: 18px;
+    max-width: 700px;
+    margin: 20px auto 35px;
+}
 
-        /* Glass box */
-        .hero-box {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(12px);
-            border-radius: 40px;
-            padding: 40px;
-        }
+.hero-box {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 30px;
+    padding: 35px;
+}
 
-        .profile-img {
-            width: 280px;
-            border-radius: 20px;
-        }
+.profile-img {
+    width: 260px;
+    border-radius: 20px;
+}
 
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 36px;
-            }
-
-            .hero-box {
-                padding: 25px;
-            }
-
-            .profile-img {
-                width: 200px;
-                margin-top: 20px;
-            }
-        }
-
-    </style>
+@media (max-width: 768px) {
+    .hero-title { font-size: 34px; }
+    .hero-subtitle { font-size: 16px; }
+    .profile-img { width: 180px; margin-top: 20px; }
+    .hero-box { padding: 20px; }
+}
+</style>
 </head>
 <body>
 
 <!-- ================= NAVBAR ================= -->
 
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
-    <div class="container-fluid px-3">
+<div class="container-fluid px-3">
 
-        <!-- Left Logo -->
-        <div class="logo-circle text-dark">
-            N
-        </div>
+    <!-- LEFT LOGO -->
+    <div class="logo-circle text-dark">N</div>
 
-        <!-- Center Menu -->
-        <div class="collapse navbar-collapse justify-content-center show position-absolute start-50 translate-middle-x">
-            <ul class="navbar-nav gap-5">
-                <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Experience</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Projects</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Skills</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Education</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Achievements</a></li>
-            </ul>
-        </div>
+    <!-- HAMBURGER -->
+    <button class="navbar-toggler ms-auto" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <!-- Right CV -->
-        <a href="https://drive.google.com/file/d/1XKybwQoP0O3Ue5QjU88GB5LUBJ6AiKNs/view?usp=sharing"
-           class="text-white text-decoration-none fw-semibold">
-            CV ↓
-        </a>
+    <!-- COLLAPSE MENU -->
+    <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+        <ul class="navbar-nav gap-lg-4 text-center">
+            <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Experience</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Projects</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Skills</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Education</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Achievements</a></li>
 
+            <!-- CV INSIDE MOBILE DROPDOWN -->
+            <li class="nav-item d-lg-none">
+                <a href="https://drive.google.com/file/d/1XKybwQoP0O3Ue5QjU88GB5LUBJ6AiKNs/view?usp=sharing"
+                   class="nav-link text-info fw-semibold">
+                   CV ↓
+                </a>
+            </li>
+        </ul>
     </div>
+
+    <!-- CV ON DESKTOP -->
+    <a href="https://drive.google.com/file/d/1XKybwQoP0O3Ue5QjU88GB5LUBJ6AiKNs/view?usp=sharing"
+       class="text-white text-decoration-none fw-semibold d-none d-lg-block ms-auto">
+       CV ↓
+    </a>
+
+</div>
 </nav>
 
-<!-- ================= HERO SECTION ================= -->
+<!-- ================= About Me ================= -->
 
 <section class="hero-section">
-    <div class="container hero-content" style="max-width: 1200px;">
+<div class="container hero-content" style="max-width: 1100px;">
 
-        <h1 class="hero-title">
-            Full Stack Developer & Systems Thinker
-        </h1>
+<h1 class="hero-title">Nishant Mahajan</h1>
 
-        <p class="hero-subtitle">
-            Building scalable web systems while exploring the intersection of 
-            technology, economics, mathematics, and artificial intelligence.
-        </p>
+<p class="hero-subtitle">
+Full Stack Developer & Systems Thinker <br>
+Building scalable web systems while exploring technology,
+economics, mathematics, and AI.
+</p>
 
-        <div class="hero-box">
-            <div class="row align-items-center">
+<div class="hero-box">
+<div class="row align-items-center text-center text-md-start">
 
-                <!-- Left Content -->
-                <div class="col-md-6 text-start ps-md-5">
-                    <h3 class="fw-semibold mb-3 text-white">About Me</h3>
-                    <p class="fs-5 text-light">
-                        I focus on building scalable systems using modern full-stack technologies.
-                        My interests extend into economics, mathematics, and AI —
-                        helping me approach engineering with a systems mindset.
-                    </p>
-                </div>
+<div class="col-md-6">
+<h3 class="fw-semibold mb-3">About Me</h3>
+<p class="text-light">
+I focus on building scalable systems using modern full-stack technologies.
+My interests extend into economics, mathematics, and AI —
+helping me approach engineering with a systems mindset.
+</p>
+</div>
 
-                <!-- Right Image -->
-                <div class="col-md-6 text-center text-md-end pe-md-5">
-                    <img src="./images/NishantProfessional_Photo.jpeg" alt="Profile" class="profile-img">
-                </div>
+<div class="col-md-6 text-center text-md-end">
+<img src="./images/NishantProfessional_Photo.jpeg" alt="Profile" class="profile-img">
+</div>
 
-            </div>
-        </div>
+</div>
+</div>
 
-    </div>
+</div>
 </section>
 
 <!-- Bootstrap JS -->
