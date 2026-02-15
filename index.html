@@ -4,8 +4,13 @@
 <meta charset="UTF-8">
 <title>Nishant Mahajan</title>
 
+<!-- Favicon -->
 <link rel="icon" type="image/png" href="./images/favicon-32x32.png">
+
+<!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -25,26 +30,22 @@ body {
 }
 
 .logo-circle {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     background-color: #2cc6c3;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 22px;
-}
-
-.nav-link:hover {
-    color: #2cc6c3 !important;
+    font-size: 20px;
 }
 
 /* HERO */
 
 .hero-section {
     position: relative;
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 70px);
     display: flex;
     align-items: center;
     text-align: center;
@@ -58,25 +59,25 @@ body {
 .hero-section::after {
     content: "";
     position: absolute;
-    width: 420px;
-    height: 420px;
+    width: 380px;
+    height: 380px;
     border-radius: 50%;
     filter: blur(120px);
-    opacity: 0.35;
+    opacity: 0.3;
     animation: float 12s ease-in-out infinite alternate;
     z-index: 0;
 }
 
 .hero-section::before {
     background: #2cc6c3;
-    top: -120px;
-    left: -120px;
+    top: -100px;
+    left: -100px;
 }
 
 .hero-section::after {
     background: #6c63ff;
-    bottom: -120px;
-    right: -120px;
+    bottom: -100px;
+    right: -100px;
     animation-delay: 4s;
 }
 
@@ -85,40 +86,76 @@ body {
     100% { transform: translate(60px, 40px); }
 }
 
-.hero-content { z-index: 2; }
+.hero-content {
+    z-index: 2;
+    padding: 0 16px;
+}
 
-/* Typography */
+/* TYPOGRAPHY */
 
 .hero-title {
-    font-size: clamp(30px, 5vw, 48px);
+    font-size: clamp(22px, 6vw, 48px);
     font-weight: 700;
+    line-height: 1.2;
+    word-wrap: break-word;
 }
 
 .hero-subtitle {
     color: #2cc6c3;
-    font-size: clamp(16px, 2.5vw, 20px);
+    font-size: clamp(14px, 3.5vw, 20px);
     max-width: 720px;
     margin: 20px auto 35px;
-    line-height: 1.5;
+    line-height: 1.4;
+    word-wrap: break-word;
 }
 
-/* About Box */
+/* GLASS BOX */
 
 .hero-box {
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(12px);
-    border-radius: 30px;
-    padding: 35px;
+    border-radius: 26px;
+    padding: 28px;
 }
 
 .hero-box p {
-    font-size: clamp(15px, 2.2vw, 18px);
+    font-size: clamp(14px, 2.5vw, 18px);
     line-height: 1.6;
 }
 
+/* TAG PILLS */
+
+.tag-pill {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 18px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #2cc6c3;
+    background: rgba(44,198,195,0.12);
+    border: 1px solid rgba(44,198,195,0.35);
+    transition: 0.3s ease;
+}
+
+.tag-pill:hover {
+    background: rgba(44,198,195,0.25);
+    transform: translateY(-2px);
+}
+
+/* IMAGE */
+
 .profile-img {
-    width: clamp(160px, 30vw, 260px);
-    border-radius: 20px;
+    width: clamp(150px, 32vw, 260px);
+    border-radius: 18px;
+}
+
+/* MOBILE EXTRA TUNING */
+
+@media (max-width: 480px) {
+    .tag-pill {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
 }
 </style>
 </head>
@@ -126,12 +163,12 @@ body {
 <body>
 
 <!-- NAVBAR -->
-
 <nav class="navbar navbar-dark navbar-custom">
 <div class="container-fluid d-flex align-items-center">
 
     <div class="logo-circle text-dark">N</div>
 
+    <!-- DESKTOP MENU -->
     <ul class="navbar-nav flex-row gap-4 mx-auto d-none d-lg-flex">
         <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="#">Experience</a></li>
@@ -150,54 +187,47 @@ body {
 </nav>
 
 <!-- HERO -->
-
 <section class="hero-section">
 <div class="container hero-content" style="max-width: 1100px;">
 
-<!-- ROLE TITLE -->
 <h1 class="hero-title">
 Full Stack Developer & Systems Thinker
 </h1>
 
-<!-- DESCRIPTION -->
 <p class="hero-subtitle">
 Building scalable web systems while exploring technology,
 economics, mathematics, and artificial intelligence.
 </p>
 
-<!-- ABOUT BOX -->
 <div class="hero-box">
-  <div class="row align-items-center text-center text-md-start">
+<div class="row align-items-center text-center text-md-start">
 
-    <!-- LEFT SIDE -->
-    <div class="col-md-6">
+<!-- LEFT -->
+<div class="col-md-6">
 
-      <!-- TAG BOXES -->
-      <div class="d-flex flex-wrap gap-2 mb-4">
-        <span class="tag-pill">About Me</span>
-        <span class="tag-pill">Strengths</span>
-        <span class="tag-pill">Weaknesses</span>
-        <span class="tag-pill">Hobbies</span>
-      </div>
-
-      <!-- ABOUT TEXT -->
-      <h3 class="fw-semibold mb-3">About Me</h3>
-      <p class="text-light">
-        I focus on building scalable systems using modern full-stack technologies.
-        My interests extend into economics, mathematics, and AI —
-        helping me approach engineering with a systems mindset.
-      </p>
-
-    </div>
-
-    <!-- RIGHT IMAGE -->
-    <div class="col-md-6 text-center text-md-end">
-      <img src="./images/NishantProfessional_Photo.jpeg" alt="Profile" class="profile-img">
-    </div>
-
-  </div>
+<div class="d-flex flex-wrap gap-2 mb-4">
+<span class="tag-pill">About Me</span>
+<span class="tag-pill">Strengths</span>
+<span class="tag-pill">Weaknesses</span>
+<span class="tag-pill">Hobbies</span>
 </div>
 
+<h3 class="fw-semibold mb-3">About Me</h3>
+<p class="text-light">
+I focus on building scalable systems using modern full-stack technologies.
+My interests extend into economics, mathematics, and AI —
+helping me approach engineering with a systems mindset.
+</p>
+
+</div>
+
+<!-- RIGHT -->
+<div class="col-md-6 text-center text-md-end">
+<img src="./images/NishantProfessional_Photo.jpeg" alt="Profile" class="profile-img">
+</div>
+
+</div>
+</div>
 
 </div>
 </section>
