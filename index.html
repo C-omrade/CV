@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
+<!-- VERY IMPORTANT FOR MOBILE -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+
 <title>Nishant Mahajan</title>
 
 <!-- Favicon -->
@@ -15,6 +20,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: #000;
@@ -42,10 +51,6 @@ body {
     font-size: 20px;
 }
 
-.nav-link:hover {
-    color: #2cc6c3 !important;
-}
-
 /* HERO */
 
 .hero-section {
@@ -64,25 +69,25 @@ body {
 .hero-section::after {
     content: "";
     position: absolute;
-    width: 380px;
-    height: 380px;
+    width: 360px;
+    height: 360px;
     border-radius: 50%;
     filter: blur(120px);
-    opacity: 0.3;
+    opacity: 0.25;
     animation: float 12s ease-in-out infinite alternate;
     z-index: 0;
 }
 
 .hero-section::before {
     background: #2cc6c3;
-    top: -100px;
-    left: -100px;
+    top: -80px;
+    left: -80px;
 }
 
 .hero-section::after {
     background: #6c63ff;
-    bottom: -100px;
-    right: -100px;
+    bottom: -80px;
+    right: -80px;
     animation-delay: 4s;
 }
 
@@ -146,7 +151,27 @@ body {
     border-radius: 18px;
 }
 
-@media (max-width: 480px) {
+/* MOBILE EXTRA TUNING */
+
+@media (max-width: 600px) {
+    .hero-section {
+        padding: 24px 0;
+        min-height: auto;
+    }
+
+    .hero-title {
+        font-size: 24px !important;
+    }
+
+    .hero-subtitle {
+        font-size: 14px !important;
+    }
+
+    .hero-box {
+        padding: 18px;
+        border-radius: 18px;
+    }
+
     .tag-pill {
         font-size: 12px;
         padding: 6px 10px;
@@ -161,10 +186,9 @@ body {
 <nav class="navbar navbar-dark navbar-custom">
 <div class="container-fluid d-flex align-items-center">
 
-    <!-- Logo -->
     <div class="logo-circle text-dark">N</div>
 
-    <!-- Desktop Menu Only -->
+    <!-- DESKTOP MENU -->
     <ul class="navbar-nav flex-row gap-4 mx-auto d-none d-lg-flex">
         <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="#">Experience</a></li>
@@ -174,7 +198,6 @@ body {
         <li class="nav-item"><a class="nav-link text-white" href="#">Achievements</a></li>
     </ul>
 
-    <!-- CV -->
     <a href="https://drive.google.com/file/d/1XKybwQoP0O3Ue5QjU88GB5LUBJ6AiKNs/view?usp=sharing"
        class="text-white text-decoration-none fw-semibold ms-auto">
        CV ↓
@@ -185,7 +208,7 @@ body {
 
 <!-- HERO -->
 <section class="hero-section">
-<div class="container hero-content" style="max-width: 1100px;">
+<div class="container-fluid hero-content" style="max-width: 1100px;">
 
 <h1 class="hero-title">
 Full Stack Developer & Systems Thinker
@@ -199,7 +222,6 @@ economics, mathematics, and artificial intelligence.
 <div class="hero-box">
 <div class="row align-items-center text-center text-md-start">
 
-<!-- LEFT -->
 <div class="col-md-6">
 
 <div class="d-flex flex-wrap gap-2 mb-4">
@@ -216,7 +238,6 @@ I focus on building scalable systems using modern full-stack technologies.
 
 </div>
 
-<!-- RIGHT -->
 <div class="col-md-6 text-center text-md-end">
 <img src="images/NishantProfessional_Photo.jpeg" alt="Profile" class="profile-img">
 </div>
