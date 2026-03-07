@@ -1,214 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
 
-<!-- VERY IMPORTANT FOR MOBILE -->
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
 
 <title>Nishant Mahajan</title>
 
-<!-- Favicon -->
 <link rel="icon" type="image/png" href="images/favicon-32x32.png">
 
-<!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-html {
-    -webkit-text-size-adjust: 100%;
+
+html{
+scroll-behavior:smooth;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #000;
-    margin: 0;
-    overflow-x: hidden;
-    color: white;
+body{
+font-family:'Inter',sans-serif;
+background:#000;
+color:white;
+margin:0;
+overflow-x:hidden;
 }
 
 /* NAVBAR */
 
-.navbar-custom {
-    background-color: #000;
-    padding: 14px 16px;
+.navbar-custom{
+background:#000;
+padding:14px 16px;
 }
 
-.logo-circle {
-    width: 40px;
-    height: 40px;
-    background-color: #2cc6c3;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 20px;
+.logo-circle{
+width:40px;
+height:40px;
+background:#2cc6c3;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:700;
+font-size:20px;
 }
 
 /* HERO */
 
-.hero-section {
-    position: relative;
-    min-height: calc(100vh - 70px);
-    display: flex;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-    background: #0f0f0f;
-    padding: 40px 0;
+.hero-section{
+position:relative;
+min-height:100vh;
+display:flex;
+align-items:center;
+text-align:center;
+background:#0f0f0f;
+overflow:hidden;
+padding:60px 0;
 }
 
-/* Glow orbs */
 .hero-section::before,
-.hero-section::after {
-    content: "";
-    position: absolute;
-    width: 360px;
-    height: 360px;
-    border-radius: 50%;
-    filter: blur(120px);
-    opacity: 0.25;
-    animation: float 12s ease-in-out infinite alternate;
-    z-index: 0;
+.hero-section::after{
+content:"";
+position:absolute;
+width:360px;
+height:360px;
+border-radius:50%;
+filter:blur(120px);
+opacity:0.25;
+animation:float 12s ease-in-out infinite alternate;
 }
 
-.hero-section::before {
-    background: #2cc6c3;
-    top: -80px;
-    left: -80px;
+.hero-section::before{
+background:#2cc6c3;
+top:-80px;
+left:-80px;
 }
 
-.hero-section::after {
-    background: #6c63ff;
-    bottom: -80px;
-    right: -80px;
-    animation-delay: 4s;
+.hero-section::after{
+background:#6c63ff;
+bottom:-80px;
+right:-80px;
+animation-delay:4s;
 }
 
-@keyframes float {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(60px, 40px); }
+@keyframes float{
+0%{transform:translate(0,0);}
+100%{transform:translate(60px,40px);}
 }
 
-.hero-content {
-    z-index: 2;
-    padding: 0 16px;
+.hero-title{
+font-size:48px;
+font-weight:700;
 }
 
-/* TYPOGRAPHY */
-
-.hero-title {
-    font-size: clamp(22px, 6vw, 48px);
-    font-weight: 700;
-    line-height: 1.2;
+.hero-subtitle{
+color:#2cc6c3;
+max-width:700px;
+margin:20px auto 30px;
+font-size:18px;
 }
 
-.hero-subtitle {
-    color: #2cc6c3;
-    font-size: clamp(14px, 3.5vw, 20px);
-    max-width: 720px;
-    margin: 20px auto 35px;
-    line-height: 1.4;
+.hero-box{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(12px);
+border-radius:24px;
+padding:30px;
 }
 
-/* GLASS BOX */
-
-.hero-box {
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(12px);
-    border-radius: 26px;
-    padding: 28px;
+.profile-img{
+width:230px;
+border-radius:18px;
 }
 
-.hero-box p {
-    font-size: clamp(14px, 2.5vw, 18px);
-    line-height: 1.6;
+/* SECTIONS */
+
+section{
+scroll-margin-top:80px;
 }
 
-/* TAG PILLS */
-
-.tag-pill {
-    display: inline-block;
-    padding: 7px 14px;
-    border-radius: 18px;
-    font-size: 13px;
-    font-weight: 500;
-    color: #2cc6c3;
-    background: rgba(44,198,195,0.12);
-    border: 1px solid rgba(44,198,195,0.35);
+.section{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:80px 0;
 }
 
-/* IMAGE */
-
-.profile-img {
-    width: clamp(150px, 32vw, 260px);
-    border-radius: 18px;
+.section-dark{
+background:#0b0b0b;
 }
 
-/* MOBILE EXTRA TUNING */
-
-@media (max-width: 600px) {
-    .hero-section {
-        padding: 24px 0;
-        min-height: auto;
-    }
-
-    .hero-title {
-        font-size: 24px !important;
-    }
-
-    .hero-subtitle {
-        font-size: 14px !important;
-    }
-
-    .hero-box {
-        padding: 18px;
-        border-radius: 18px;
-    }
-
-    .tag-pill {
-        font-size: 12px;
-        padding: 6px 10px;
-    }
+.section-darker{
+background:#070707;
 }
+
+.section-accent{
+background:#0d1117;
+}
+
+.section-title{
+font-size:36px;
+font-weight:700;
+text-align:center;
+margin-bottom:50px;
+}
+
+/* CARDS */
+
+.card-glass{
+background:rgba(255,255,255,0.04);
+border-radius:18px;
+padding:28px;
+border:1px solid rgba(255,255,255,0.05);
+transition:0.3s;
+height:100%;
+}
+
+.card-glass:hover{
+transform:translateY(-6px);
+border-color:#2cc6c3;
+}
+
+/* SKILLS */
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+.skill-card{
+background:rgba(255,255,255,0.03);
+border-radius:18px;
+padding:25px;
+border:1px solid rgba(255,255,255,0.06);
+transition:0.3s;
+}
+
+.skill-card:hover{
+transform:translateY(-6px);
+border-color:#2cc6c3;
+}
+
+.skill-title{
+font-weight:600;
+margin-bottom:15px;
+color:#2cc6c3;
+}
+
+.skill-list span{
+display:inline-block;
+margin:5px;
+padding:6px 12px;
+border-radius:14px;
+background:rgba(44,198,195,0.12);
+border:1px solid rgba(44,198,195,0.4);
+font-size:13px;
+}
+
+/* FOOTER */
+
+.footer{
+padding:40px 0;
+text-align:center;
+background:#000;
+color:#aaa;
+}
+
 </style>
+
 </head>
 
 <body>
 
 <!-- NAVBAR -->
+
 <nav class="navbar navbar-dark navbar-custom">
 <div class="container-fluid d-flex align-items-center">
 
-    <div class="logo-circle text-dark">N</div>
+<div class="logo-circle text-dark">N</div>
 
-    <!-- DESKTOP MENU -->
-    <ul class="navbar-nav flex-row gap-4 mx-auto d-none d-lg-flex">
-        <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="#">Experience</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="#">Projects</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="#">Skills</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="#">Education</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="#">Achievements</a></li>
-    </ul>
+<ul class="navbar-nav flex-row gap-4 mx-auto d-none d-lg-flex">
+<li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
+<li class="nav-item"><a class="nav-link text-white" href="#experience">Experience</a></li>
+<li class="nav-item"><a class="nav-link text-white" href="#projects">Projects</a></li>
+<li class="nav-item"><a class="nav-link text-white" href="#skills">Skills</a></li>
+<li class="nav-item"><a class="nav-link text-white" href="#education">Education</a></li>
+<li class="nav-item"><a class="nav-link text-white" href="#achievements">Achievements</a></li>
+</ul>
 
-    <a href="https://drive.google.com/file/d/1tXJSxih7xf1BJBP_D2m5SXtwwVfAiST2/view?usp=sharing"
-       class="text-white text-decoration-none fw-semibold ms-auto">
-       CV ↓
-    </a>
+<a href="https://drive.google.com/file/d/1tXJSxih7xf1BJBP_D2m5SXtwwVfAiST2/view"
+class="text-white text-decoration-none fw-semibold">
+CV ↓
+</a>
 
 </div>
 </nav>
 
 <!-- HERO -->
+
 <section class="hero-section">
-<div class="container-fluid hero-content" style="max-width: 1100px;">
+
+<div class="container">
 
 <h1 class="hero-title">
 Full Stack Developer & Systems Thinker
@@ -220,33 +253,263 @@ economics, mathematics, and artificial intelligence.
 </p>
 
 <div class="hero-box">
-<div class="row align-items-center text-center text-md-start">
 
-<div class="col-md-6">
+<div class="row align-items-center">
 
-<div class="d-flex flex-wrap gap-2 mb-4">
-<span class="tag-pill">About Me</span>
-<span class="tag-pill">Strengths</span>
-<span class="tag-pill">Weaknesses</span>
-<span class="tag-pill">Hobbies</span>
-</div>
+<div class="col-md-6 text-start">
 
-<h3 class="fw-semibold mb-3">About Me</h3>
-<p class="text-light">
-I focus on building scalable systems using modern full-stack technologies.
+<h3>About Me</h3>
+
+<p>
+Backend developer experienced in building scalable Django
+applications and REST APIs. Passionate about solving
+real-world problems through system design,
+data engineering, and automation.
 </p>
 
 </div>
 
-<div class="col-md-6 text-center text-md-end">
-<img src="images/NishantProfessional_Photo.jpeg" alt="Profile" class="profile-img">
+<div class="col-md-6 text-center">
+
+<img src="images/NishantProfessional_Photo.jpeg" class="profile-img">
+
 </div>
 
 </div>
+
 </div>
 
 </div>
+
 </section>
+
+<!-- EXPERIENCE -->
+
+<section class="section section-dark" id="experience">
+
+<div class="container">
+
+<h2 class="section-title">Experience</h2>
+
+<div class="row g-4">
+
+<div class="col-md-6">
+<div class="card-glass">
+
+<h4>Junior Developer — Eggoz</h4>
+<p class="text-secondary">Jan 2025 – Present</p>
+
+<ul>
+<li>Improved supply chain backend architecture</li>
+<li>Built CRM with loyalty points system</li>
+<li>Designed scalable REST APIs</li>
+<li>Automated backup systems using Python</li>
+</ul>
+
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="card-glass">
+
+<h4>Data Analytics Intern — Aakash</h4>
+<p class="text-secondary">May 2024 – Jul 2024</p>
+
+<ul>
+<li>Developed faculty scoring simulation</li>
+<li>Authored product requirement documentation</li>
+<li>Enhanced AWS security policies</li>
+</ul>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section class="section section-darker" id="projects">
+
+<div class="container">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="card-glass">
+<h5>Water Quality Monitoring</h5>
+<p>
+Implemented predictive models for water optical
+parameters achieving RMSE of 2.13.
+</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card-glass">
+<h5>Cloud Data Center Simulation</h5>
+<p>
+Designed intelligent VM allocation and automated
+server optimization to reduce energy usage.
+</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card-glass">
+<h5>PSAZ System Analyzer</h5>
+<p>
+Built system monitoring framework using
+Glances API and Pandas.
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section class="section section-accent" id="skills">
+
+<div class="container">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+<div class="skill-title">Languages</div>
+<div class="skill-list">
+<span>Python</span>
+<span>C++</span>
+<span>JavaScript</span>
+<span>SQL</span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-title">Backend & Systems</div>
+<div class="skill-list">
+<span>Django</span>
+<span>Django REST</span>
+<span>REST APIs</span>
+<span>System Design</span>
+<span>OOP</span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-title">Data & ML</div>
+<div class="skill-list">
+<span>Pandas</span>
+<span>NumPy</span>
+<span>DBSCAN</span>
+<span>OPTICS</span>
+<span>Data Processing</span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-title">Cloud & Tools</div>
+<div class="skill-list">
+<span>AWS</span>
+<span>Docker</span>
+<span>Linux</span>
+<span>Git</span>
+<span>Postman</span>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section class="section section-dark" id="education">
+
+<div class="container">
+
+<h2 class="section-title">Education</h2>
+
+<div class="card-glass text-center">
+
+<h4>B.Tech — Computer Science & AI</h4>
+<p>Plaksha University</p>
+<p class="text-secondary">2021 – 2025</p>
+<p>CGPA: 7.25 / 10</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ACHIEVEMENTS -->
+
+<section class="section section-darker" id="achievements">
+
+<div class="container">
+
+<h2 class="section-title">Achievements</h2>
+
+<div class="row g-4">
+
+<div class="col-md-6">
+<div class="card-glass">
+<h5>Eggoz Rising Star</h5>
+<p>Recognized for exceptional technical performance (2025–2026)</p>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="card-glass">
+<h5>JEE Mains 95th Percentile</h5>
+<p>Demonstrated strong analytical and problem solving ability</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<p>© 2026 Nishant Mahajan</p>
+
+<p>
+
+<a href="https://github.com/C-omrade"
+class="text-light text-decoration-none">GitHub</a>
+
+|
+
+<a href="https://www.linkedin.com/in/nishant-mahajan-57ba33197/"
+class="text-light text-decoration-none">LinkedIn</a>
+
+|
+
+<a href="mailto:nishantmahajanplk@gmail.com"
+class="text-light text-decoration-none">Email</a>
+
+</p>
+
+</footer>
 
 </body>
 </html>
